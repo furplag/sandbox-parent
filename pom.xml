@@ -1,0 +1,193 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.6.RELEASE</version>
+    <relativePath />
+  </parent>
+
+  <groupId>jp.furplag.sandbox</groupId>
+  <artifactId>sandbox-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>${project.artifactId}</name>
+  <inceptionYear>2018</inceptionYear>
+  <description>should always awareness the versions .</description>
+  <url>https://github.com/furplag/${project.artifactId}</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+  <organization />
+  <developers>
+    <developer>
+      <id>${developer.name}</id>
+      <name>${developer.name}</name>
+      <url>${developer.url}</url>
+    </developer>
+  </developers>
+  <scm>
+    <url>${project.url}</url>
+    <connection>scm:git:${project.url}.git</connection>
+    <developerConnection>scm:git:${project.url}.git</developerConnection>
+    <tag>${project.name}-${project.version}</tag>
+  </scm>
+  <distributionManagement>
+    <repository>
+      <id>internal.repo</id>
+      <name>Temporary Staging Repository</name>
+      <url>file://${project.build.directory}/mvn-repo</url>
+    </repository>
+  </distributionManagement>
+  <issueManagement>
+    <url>${project.url}/issues</url>
+    <system>GitHub Issues</system>
+  </issueManagement>
+
+  <repositories>
+
+    <repository>
+      <id>jp.furplag.sandbox.deamtiet</id>
+      <url>https://raw.github.com/furplag/deamtiet/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>jp.furplag.sandbox.doma-fragments</id>
+      <url>https://raw.github.com/furplag/doma-fragments/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>jp.furplag.sandbox.jsonifier</id>
+      <url>https://raw.github.com/furplag/jsonifier/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>jp.furplag.sandbox.lunisolar</id>
+      <url>https://raw.github.com/furplag/lunisolar/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>jp.furplag.sandbox.memento</id>
+      <url>https://raw.github.com/furplag/memento/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>jp.furplag.sandbox.orrery</id>
+      <url>https://raw.github.com/furplag/orrery/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>jp.furplag.sandbox.relic</id>
+      <url>https://raw.github.com/furplag/relic/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>jp.furplag.sandbox.text-commonize</id>
+      <url>https://raw.github.com/furplag/text-commonize/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>jp.furplag.sandbox.trebuchet</id>
+      <url>https://raw.github.com/furplag/trebuchet/mvn-repo/</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+  </repositories>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>11</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+
+    <doma-spring-boot-starter.version>1.1.1</doma-spring-boot-starter.version>
+    <doma.version>2.19.3</doma.version>
+    <flyway.version>5.2.1</flyway.version>
+    <h2.version>1.4.197</h2.version>
+    <jackson.version>2.9.7</jackson.version>
+    <junit-jupiter.version>5.3.1</junit-jupiter.version>
+    <junit-platform.version>1.3.1</junit-platform.version>
+    <logback.version>1.2.3</logback.version>
+    <lombok.version>1.18.4</lombok.version>
+    <tomcat.version>9.0.12</tomcat.version>
+
+    <sandbox.deamtiet.version>2.0.0</sandbox.deamtiet.version>
+    <sandbox.doma-fragments.version>2.0.0</sandbox.doma-fragments.version>
+    <sandbox.jsonifier.version>3.1.1</sandbox.jsonifier.version>
+    <sandbox.lunisolar.version>2.0.0-SNAPSHOT</sandbox.lunisolar.version>
+    <sandbox.memento.version>2.0.0-SNAPSHOT</sandbox.memento.version>
+    <sandbox.orrery.version>2.0.0</sandbox.orrery.version>
+    <sandbox.relic.version>2.0.0</sandbox.relic.version>
+    <sandbox.text-commonize.version>2.1.0</sandbox.text-commonize.version>
+    <sandbox.trebuchet.version>2.0.0</sandbox.trebuchet.version>
+
+    <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
+    <github.site-maven-plugin.version>0.12</github.site-maven-plugin.version>
+    <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
+    <license-maven-plugin.version>3.0</license-maven-plugin.version>
+    <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
+    <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+    <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+    <maven-failsafe-plugin.version>2.22.1</maven-failsafe-plugin.version>
+    <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
+    <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
+    <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
+    <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+    <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+    <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+    <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
+
+  </properties>
+
+  <dependencyManagement>
+
+  </dependencyManagement>
+
+  <pluginManagement>
+
+  </pluginManagement>
+
+</project>
